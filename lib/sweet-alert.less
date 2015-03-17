@@ -5,14 +5,11 @@
 @import "sweet-alert-animations";
 
 .sweet-overlay {
-  background-color: fade(#000, 40%);
-
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-
   display: none;
   z-index: @zindex-modal;
 }
@@ -21,10 +18,14 @@
   @width: 478px;
   @padding: 17px;
 
+  outline: none;
+  -moz-outline-color: rgba(0,0,0,0);
+
   background-color: @body-bg;
   width: @width;
   padding: @padding;
-  border-radius: 5px;
+
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
 
   position: fixed;
@@ -250,5 +251,23 @@
 
   button::-moz-focus-inner {
     border: 0;
+  }
+  h2{
+    font-size: 16px;
+    text-align: left;
+    color: #64BEC3;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #64BEC3;
+    padding-bottom: 5px;
+  }
+  .text-muted{
+    font-size: 14px;
+  }
+  .confirm,.cancel{
+    width: 100px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 }
